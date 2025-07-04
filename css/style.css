@@ -64,7 +64,7 @@ header{
 }
 
 .arrows{
-  flex: auto;
+  flex: none;
 }
 
 @keyframes move-arrow {
