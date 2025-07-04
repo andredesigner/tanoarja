@@ -5,6 +5,14 @@ body{
   font-size: 16px;
 }
 
+.lock-scroll{
+  overflow: hidden;
+}
+
+.logo{
+  z-index: 9999;
+}
+
 @media(max-width: 767px){
   header,
   .container{
@@ -12,11 +20,11 @@ body{
     padding-right: 24px;
   }
 
-  .button{
-    position: fixed;
+  #button-header{
+    /* position: fixed;
     bottom: 32px;
     left: 24px;
-    right: 24px;
+    right: 24px; */
     justify-content: center;
   }
 
@@ -49,6 +57,8 @@ header{
   font-weight: 600;
   color: #ffffe5;
   align-items: center;
+  border-radius: 4px;
+  line-height: 36px;
 }
 
 .button:hover .arrows{
@@ -130,4 +140,124 @@ P{
   height: auto;
   display: block;
   margin: auto;
+}
+
+#modal{
+  height: 100vh;
+  position: fixed;
+  background-color: #fff;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  padding: 32px 24px;
+  transform: translateX(100%);
+  transition: .3s ease-in-out;
+}
+
+#modal.active{
+  transform: translateX(0%);
+  transition: .4s ease-in-out;
+}
+
+#modal.active .content-modal{
+  transform: translateX(0);
+  opacity: 1;
+  transition: 1s ease-in-out;
+  animation-delay: 1s;
+}
+
+@media(min-width: 500px){
+  #modal{
+    width: 600px;
+    display: flex;
+    justify-content: center;
+  }
+  .content-modal{
+    max-width: 400px;
+  }
+}
+
+#modal .content-modal{
+  transform: translateX(16px);
+  opacity: 0;
+  transition: .2s ease-in-out;
+}
+
+#modal .content-modal a{
+  display: block;
+  text-align: right;
+  color: #250300;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  /* margin-bottom: 112px; */
+  margin-bottom: 64px;
+}
+
+#modal .content-modal p{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #250300;
+  margin-bottom: 48px;
+}
+
+#modal .content-modal form{
+  background: #FFFFFF;
+  border-radius: 8px;
+  outline: 16px solid rgba(78, 176, 193, 0.32);
+  margin: 16px;
+}
+
+#modal .content-modal form .input-form{
+  display: flex;
+  flex-direction: column;
+  height: 82px;
+  padding: 12px 16px;
+}
+
+#modal .content-modal form .input-form:first-child{
+  border-bottom: 1px solid #250300;
+}
+
+#modal .content-modal form .input-form label{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+#modal .content-modal form .input-form input{
+  border: none;
+  width: 100%;
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  color: #250300;
+}
+
+#modal .content-modal form .input-form input::placeholder{
+  color: #949494;
+}
+
+#modal .content-modal form .input-form input:active,
+#modal .content-modal form .input-form input:focus{
+  outline: none;
+}
+
+.wrap-button{
+  padding: 16px;
+}
+
+.wrap-button .button{
+  border: none;
+  width: 100%;
+  color: #250300;
+  font-size: 28px;
+  font-weight: 600;
+  justify-content: center;
 }
