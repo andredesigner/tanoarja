@@ -1,0 +1,133 @@
+body{
+  background-color: #ffffe5;
+  color: #220502;
+  font-family: 'Space Grotesk';
+  font-size: 16px;
+}
+
+@media(max-width: 767px){
+  header,
+  .container{
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .button{
+    position: fixed;
+    bottom: 32px;
+    left: 24px;
+    right: 24px;
+    justify-content: space-between;
+  }
+
+  .button .arrows{
+    animation: move-arrow 1.8s ease-in-out infinite;
+  }
+}
+
+header{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-style: normal;
+  align-items: center;
+  padding-top: 32px;
+}
+
+.button{
+  display: flex;
+  gap: 16px;
+  vertical-align: middle;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 16px;
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  color: #4EB0C1;
+  align-items: center;
+}
+
+.button:hover .arrows{
+  animation: move-arrow 1.4s ease-in-out infinite;
+}
+
+.wrap-svg{
+  display: flex;
+  justify-content: right;
+  width: 45px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.arrows{
+  flex: auto;
+}
+
+@keyframes move-arrow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(75px);
+  }
+}
+
+.container{
+  text-align: center;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+h1{
+  font-weight: 400;
+  font-size: 4em;
+  line-height: 100%;
+  letter-spacing: -0.05em;
+}
+
+P{
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.highlights{
+  position: relative;
+}
+
+.highlights::before{
+  content: "Com\00a0qualidade";
+  position: absolute;
+  rotate: 4deg;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: normal;
+  color: #F4B43F;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+}
+
+.highlights::after{
+  content: url("data:image/svg+xml,%3Csvg%20width%3D%2238%22%20height%3D%2251%22%20viewBox%3D%220%200%2038%2051%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M19.3267%201.3273C19.6745%201.01094%2020.1507%200.875366%2020.6128%200.962067C23.2227%201.45175%2026.7489%202.77192%2029.9292%204.46597C33.056%206.13151%2036.1596%208.3209%2037.6304%2010.6955L35.0796%2012.2755C34.0528%2010.6177%2031.5672%208.73705%2028.5191%207.11343C27.1181%206.36721%2025.6642%205.71093%2024.2857%205.17984C27.351%2010.6175%2028.7495%2018.9415%2025.3999%2030.132C21.154%2044.317%208.06996%2049.3603%202.03861%2050.131C1.21687%2050.236%200.464887%2049.6549%200.359904%2048.8332C0.254946%2048.0115%200.836209%2047.2606%201.65776%2047.1554C7.02618%2046.4696%2018.7469%2041.8968%2022.5259%2029.2726C25.3679%2019.7782%2024.5114%2012.7975%2022.4078%208.11929C22.3945%2011.2227%2021.5842%2014.925%2018.2017%2018.6076L15.9927%2016.5773C20.8678%2011.2693%2019.191%206.39932%2018.8423%202.57242C18.7998%202.10438%2018.9791%201.64358%2019.3267%201.3273Z%22%20fill%3D%22%23F4B43F%22%2F%3E%3C%2Fsvg%3E");
+  position: absolute;
+  top: 0;
+  left: 90%;
+}
+
+.word-map{
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
