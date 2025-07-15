@@ -1,3 +1,24 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Labrada:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+
 body{
   background-color: #F0F6FF;
   color: #0F1324;
@@ -254,13 +275,14 @@ span.text{
   font-family: "Nunito Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 18px;
   line-height: 36px;
   color: #250300;
 }
 
 #modal .content-modal form .input-form input::placeholder{
   color: #949494;
+  font-size: 28px;
 }
 
 #modal .content-modal form .input-form input:active,
