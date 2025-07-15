@@ -287,3 +287,12 @@ span.text{
   right: 0;
   z-index: -1;
 }
+
+@media (max-width: 767px) {
+  .illustration{
+    top: 35vh;
+    right: -6vw;
+    z-index: -1;
+    width: 160px;
+  }
+}
