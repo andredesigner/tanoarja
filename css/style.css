@@ -1,7 +1,7 @@
 body{
-  background-color: #ffffe5;
-  color: #220502;
-  font-family: 'Space Grotesk';
+  background-color: #F0F6FF;
+  color: #0F1324;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
 }
 
@@ -45,19 +45,19 @@ header{
 }
 
 .button{
-  display: flex;
-  gap: 16px;
+  display: inline-flex;
+  gap: 8px;
   vertical-align: middle;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   padding: 12px 16px;
-  background-color: #FFB200;
+  background-color: #FFCF02;
   font-size: 18px;
   font-weight: 600;
-  color: #ffffe5;
+  color: #0F1324;
   align-items: center;
-  border-radius: 4px;
+  border-radius: 16px;
   line-height: 36px;
 }
 
@@ -68,8 +68,8 @@ header{
 .wrap-svg{
   display: flex;
   justify-content: right;
-  width: 45px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   overflow: hidden;
 }
 
@@ -87,19 +87,28 @@ header{
 }
 
 .container{
+  max-width: 792px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  gap: 16px;
   display: flex;
   flex-direction: column;
   padding-top: 4em;
   padding-bottom: 4em;
 }
 
+.wrap-text{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 32px;
+  position: relative;
+}
+
 h1{
-  font-weight: 400;
+  font-weight: 500;
   font-size: 4em;
   line-height: 100%;
-  letter-spacing: -0.05em;
 }
 
 P{
@@ -108,23 +117,30 @@ P{
   line-height: 26px;
 }
 
-.highlights{
-  position: relative;
+span.text{
+  font-size: 32px;
+  font-weight: 400;
 }
 
-.highlights::before{
-  content: "Com\00a0qualidade";
-  position: absolute;
-  rotate: 4deg;
+
+.tagline{
+  width: fit-content;
+  font-family: "Nunito Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 22px;
-  letter-spacing: normal;
-  color: #F4B43F;
-  position: absolute;
-  bottom: 100%;
-  left: 0;
+  font-size: 11px;
+  line-height: 120%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #3462AC;
+  padding: 8px 16px;
+  border: 1px solid #3462AC;
+  border-radius: 999px;
+  margin: auto;
+}
+
+.highlights{
+  position: relative;
 }
 
 .highlights::after{
@@ -202,13 +218,13 @@ P{
   line-height: 23px;
   color: #250300;
   margin-bottom: 48px;
+  text-align: center;
 }
 
 #modal .content-modal form{
-  background: #FFFFFF;
-  border-radius: 8px;
-  outline: 16px solid rgba(78, 176, 193, 0.32);
-  margin: 16px;
+  background: #0e1324;
+  border-radius: 16px;
+  padding: 16px;
 }
 
 #modal .content-modal form .input-form{
@@ -216,15 +232,18 @@ P{
   flex-direction: column;
   height: 82px;
   padding: 12px 16px;
+  background-color: #fff;
 }
 
 #modal .content-modal form .input-form:first-child{
-  border-bottom: 1px solid #250300;
+  border-bottom: 2px solid #0d1324;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 #modal .content-modal form .input-form label{
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   line-height: 18px;
 }
@@ -232,7 +251,7 @@ P{
 #modal .content-modal form .input-form input{
   border: none;
   width: 100%;
-  font-family: 'Space Grotesk';
+  font-family: "Nunito Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
@@ -250,14 +269,21 @@ P{
 }
 
 .wrap-button{
-  padding: 16px;
+  padding: 32px 16px 16px 16px;
 }
 
 .wrap-button .button{
   border: none;
   width: 100%;
-  color: #250300;
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 24px;
   justify-content: center;
+}
+
+.illustration{
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  top: -5px;
+  right: 0;
+  z-index: -1;
 }
