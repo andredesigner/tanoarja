@@ -256,7 +256,7 @@ span.text{
   background-color: #fff;
 }
 
-#modal .content-modal form .input-form:first-child{
+#modal .content-modal form .input-form{
   border-bottom: 2px solid #0d1324;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
